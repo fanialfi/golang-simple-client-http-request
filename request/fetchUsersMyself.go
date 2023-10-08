@@ -1,4 +1,4 @@
-package main
+package request
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 )
 
 // function ini kegunaannya sama seperti fetchUsers()
-func fetchUsersMyself() ([]student, error) {
+func FetchUsersMyself() ([]student, error) {
 	url := "http://localhost:8080/users"
 	var data []student
 

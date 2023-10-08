@@ -1,4 +1,4 @@
-package main
+package request
 
 import (
 	"encoding/json"
@@ -16,7 +16,7 @@ type student struct {
 // digunakan untuk melakukan request ke http://localhost:8080/users
 // yang telah dibuat di https://github.com/fanialfi/golang-web-service-api-server.git
 // lalu menerima response dari request tersebut lalu menampilkannya
-func fetchUsers() ([]student, error) {
+func FetchUsers() ([]student, error) {
 	var err error
 
 	// &http.Client{}
