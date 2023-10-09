@@ -5,9 +5,9 @@ import (
 	"net/http"
 )
 
-var baseUrl string = "http://localhost:8080"
+var BaseUrl string = "http://localhost:8080"
 
-type student struct {
+type Student struct {
 	ID    string
 	Name  string
 	Grade int
@@ -16,7 +16,7 @@ type student struct {
 // digunakan untuk melakukan request ke http://localhost:8080/users
 // yang telah dibuat di https://github.com/fanialfi/golang-web-service-api-server.git
 // lalu menerima response dari request tersebut lalu menampilkannya
-func FetchUsers() ([]student, error) {
+func FetchUsers() ([]Student, error) {
 	var err error
 
 	// &http.Client{}
@@ -24,11 +24,11 @@ func FetchUsers() ([]student, error) {
 	// diperlukan untuk eksekusi request
 	var client = &http.Client{}
 
-	var data []student
+	var data []Student
 
 	// http.NewRequest(method, url string, body io.Reader)(*Request, error)
 	// digunakan untuk membuat request baru menggunakan context.Background
-	request, err := http.NewRequest("GET", baseUrl+"/users", nil)
+	request, err := http.NewRequest("GET", BaseUrl+"/users", nil)
 	if err != nil {
 		return nil, err
 	}

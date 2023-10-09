@@ -6,9 +6,9 @@ import (
 )
 
 // function ini kegunaannya sama seperti fetchUsers()
-func FetchUsersMyself() ([]student, error) {
+func FetchUsersMyself() ([]Student, error) {
 	url := "http://localhost:8080/users"
-	var data []student
+	var data []Student
 
 	response, err := http.Get(url)
 	if err != nil {
